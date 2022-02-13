@@ -9,7 +9,7 @@ Program::Program() {
 	Serial.begin(MONITOR_SPEED);
 	while ( ! Serial ) { ; }
 
-	TransfertSerie* serie = new TransfertSerie(0, 1, MONITOR_SPEED, nullptr);
+	TransfertSerie* serie = new TransfertSerie(BORNE_RX, BORNE_TX, MONITOR_SPEED, nullptr);
 	LecteurNFC* lecteur = new LecteurNFC(serie);
 
 	tete = lecteur;

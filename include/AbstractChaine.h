@@ -11,7 +11,5 @@ protected:
 
 public:
 	AbstractChaine(AbstractChaine* prochain);
-
-
 	virtual void traiter(Requete requete) = 0;
 };

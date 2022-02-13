@@ -16,6 +16,6 @@ TransfertSerie::TransfertSerie(int RX, int TX, int monitorSpeed, AbstractChaine*
 
 void TransfertSerie::traiter(Requete requete) {
 	const uint8_t* data = (uint8_t*) &requete;
-	Serial.write(data, sizeof(requete) );
+	Serial.write(data, sizeof(Requete) );
 	faireSuivre(requete);
 }
